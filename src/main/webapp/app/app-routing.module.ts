@@ -6,6 +6,8 @@ import { DEBUG_INFO_ENABLED } from 'app/app.constants';
 import { Authority } from 'app/shared/constants/authority.constants';
 
 import { UserRouteAccessService } from 'app/core/auth/user-route-access-service';
+import { ViewRestaurantsComponent } from './view-restaurants/view-restaurants.component';
+import { AddRestaurantComponent } from './add-restaurant/add-restaurant.component';
 
 const LAYOUT_ROUTES = [navbarRoute, ...errorRoute];
 
@@ -20,6 +22,14 @@ const LAYOUT_ROUTES = [navbarRoute, ...errorRoute];
           },
           canActivate: [UserRouteAccessService],
           loadChildren: () => import('./admin/admin-routing.module').then(m => m.AdminRoutingModule),
+        },
+        {
+          path: 'restaurants',
+          component: ViewRestaurantsComponent,
+        },
+        {
+          path: 'add-restaurant',
+          component: AddRestaurantComponent,
         },
         {
           path: 'account',
