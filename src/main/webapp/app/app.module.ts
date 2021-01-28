@@ -13,6 +13,8 @@ import { NavbarComponent } from './layouts/navbar/navbar.component';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { PageRibbonComponent } from './layouts/profiles/page-ribbon.component';
 import { ErrorComponent } from './layouts/error/error.component';
+import { ViewRestaurantsComponent } from './view-restaurants/view-restaurants.component';
+import { AddRestaurantComponent } from './add-restaurant/add-restaurant.component';
 
 @NgModule({
   imports: [
@@ -24,7 +26,15 @@ import { ErrorComponent } from './layouts/error/error.component';
     VtFoodEntityModule,
     VtFoodAppRoutingModule,
   ],
-  declarations: [MainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, FooterComponent],
+  declarations: [
+    MainComponent,
+    NavbarComponent,
+    ErrorComponent,
+    PageRibbonComponent,
+    FooterComponent,
+    ViewRestaurantsComponent,
+    AddRestaurantComponent,
+  ],
   bootstrap: [MainComponent],
 })
 export class VtFoodAppModule {}
