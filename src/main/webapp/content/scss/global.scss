@@ -69,10 +69,15 @@ Generic styles
 
 /* other generic styles */
 
+body {
+  background-color: rgb(107, 44, 61);
+}
+
 .jh-card {
   padding: 1.5%;
   margin-top: 20px;
   border: none;
+  background-color: rgb(107, 44, 61);
 }
 
 .error {
