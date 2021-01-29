@@ -123,7 +123,7 @@ public class InitialSetupMigration {
     	mongoTemplate.save(wendys);
     	
     	Restaurant bar201 = new Restaurant();
-    	bar201.setName("Bar 201");
+    	bar201.setName("622 Restaurant and Bar");
     	bar201.setCuisine("");
     	bar201.setBar(1);
     	bar201.setSpecials("");
