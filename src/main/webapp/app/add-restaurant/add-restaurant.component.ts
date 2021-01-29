@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, Validators, FormBuilder, FormControl } from '@angular/forms';
+import { Validators, FormBuilder } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -8,6 +8,8 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./add-restaurant.component.scss'],
 })
 export class AddRestaurantComponent implements OnInit {
+
+  success = false;
 
   restaurantForm = this.fb.group({
     name: ['', Validators.required],
@@ -25,11 +27,9 @@ export class AddRestaurantComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onSubmit() {
-    console.warn(this.restaurantForm.value);
+  onSubmit(): void {
     this.http.post('http://localhost:9000/api/restaurant/add', this.restaurantForm.value).subscribe(
-      (response) => console.log(response),
-      (error) => console.log(error)
+    	() => (this.success = true)
     );
   }
 

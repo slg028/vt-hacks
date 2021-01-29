@@ -1,3 +1,7 @@
+<div class="alert alert-success" *ngIf="success">
+     <strong>Restaurant saved!</strong> Please check the Restaurants tab to see yours.
+</div>
+
 <form [formGroup]="restaurantForm" (ngSubmit)="onSubmit()">
     <label>
         Name:
