@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { AgGridModule } from 'ag-grid-angular';
+
 import './vendor';
 import { VtFoodSharedModule } from 'app/shared/shared.module';
 import { VtFoodCoreModule } from 'app/core/core.module';
@@ -13,12 +15,14 @@ import { NavbarComponent } from './layouts/navbar/navbar.component';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { PageRibbonComponent } from './layouts/profiles/page-ribbon.component';
 import { ErrorComponent } from './layouts/error/error.component';
-import { ViewRestaurantsComponent } from './view-restaurants/view-restaurants.component';
 import { AddRestaurantComponent } from './add-restaurant/add-restaurant.component';
+import { ViewRestaurantsModule } from './view-restaurants/view-restaurants.module';
 
 @NgModule({
   imports: [
+    AgGridModule.withComponents(null),
     BrowserModule,
+    ViewRestaurantsModule,
     VtFoodSharedModule,
     VtFoodCoreModule,
     VtFoodHomeModule,
@@ -26,15 +30,7 @@ import { AddRestaurantComponent } from './add-restaurant/add-restaurant.componen
     VtFoodEntityModule,
     VtFoodAppRoutingModule,
   ],
-  declarations: [
-    MainComponent,
-    NavbarComponent,
-    ErrorComponent,
-    PageRibbonComponent,
-    FooterComponent,
-    ViewRestaurantsComponent,
-    AddRestaurantComponent,
-  ],
+  declarations: [MainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, FooterComponent, AddRestaurantComponent],
   bootstrap: [MainComponent],
 })
 export class VtFoodAppModule {}

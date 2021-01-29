@@ -10,3 +10,43 @@ eg $input-color: red;
 @import '~bootstrap/scss/bootstrap';
 
 /* jhipster-needle-scss-add-vendor JHipster will add new css style */
+
+@import '~ag-grid-community/dist/styles/ag-grid.css';
+@import '~ag-grid-community/dist/styles/ag-theme-balham.css';
+@import '~ag-grid-community/src/styles/ag-theme-balham/sass/ag-theme-balham-mixin.scss';
+
+$light-color: #e1aead;
+$medium-color: #bc6e64;
+$grid-color: rgb(207, 69, 32);
+$navbar: rgb(107, 44, 61);
+$dark-color: #ad1027;
+$dark-text: #0d0d0d;
+$light-text: #f2f2f2;
+
+.ag-theme-balham {
+  @include ag-theme-balham(
+    (
+      header-background-color: $grid-color,
+      header-foreground-color: $light-text,
+      odd-row-background-color: $light-color,
+      data-color: $dark-text,
+      font-size: 14px,
+    )
+  );
+
+  .ag-header-cell {
+    .ag-input-field-input {
+      color: $dark-text;
+    }
+  }
+
+  .ag-paging-panel {
+    background: $grid-color;
+    border: 1px solid #bdc3c7;
+    color: $light-text;
+  }
+
+  .ag-cell-value {
+    font-weight: 400;
+  }
+}
