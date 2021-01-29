@@ -41,7 +41,7 @@ public class RestaurantService {
 		restaurant.setBar(restaurantDto.getBar());
 		restaurant.setLocation(restaurantDto.getLocation());
 		restaurant.setPrice(restaurantDto.getPrice());
-		restaurant.setLocation(restaurantDto.getLocation());
+		restaurant.setSpecials(restaurantDto.getSpecials());
 		
 		restaurantRepository.save(restaurant);
 		log.debug("Created restaurant: {}", restaurant);
