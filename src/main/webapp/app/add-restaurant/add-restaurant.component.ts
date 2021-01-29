@@ -8,7 +8,6 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./add-restaurant.component.scss'],
 })
 export class AddRestaurantComponent implements OnInit {
-
   success = false;
 
   restaurantForm = this.fb.group({
@@ -17,20 +16,20 @@ export class AddRestaurantComponent implements OnInit {
     bar: ['', Validators.required],
     specials: ['', Validators.required],
     location: ['', Validators.required],
-    price: ['', Validators.required]
-  })
+    price: ['', Validators.required],
+  });
 
-  constructor(
-    private http: HttpClient,
-    private fb: FormBuilder
-  ) {}
+  public response = {};
+  public error = '';
+
+  constructor(private http: HttpClient, private fb: FormBuilder) {}
 
   ngOnInit(): void {}
 
   onSubmit(): void {
-    this.http.post('http://localhost:9000/api/restaurant/add', this.restaurantForm.value).subscribe(
-    	() => (this.success = true)
-    );
+    this.http.post('http://localhost:9000/api/restaurant/add', this.restaurantForm.value).subscribe(() => {
+      this.success = true;
+      this.restaurantForm.reset();
+    });
   }
-
 }

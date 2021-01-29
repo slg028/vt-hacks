@@ -18,7 +18,7 @@ eg $input-color: red;
 $light-color: #e1aead;
 $medium-color: #bc6e64;
 $grid-color: rgb(207, 69, 32);
-$navbar: rgb(107, 44, 61);
+$bg-color: rgb(107, 44, 61);
 $dark-color: #ad1027;
 $dark-text: #0d0d0d;
 $light-text: #f2f2f2;
@@ -28,21 +28,29 @@ $light-text: #f2f2f2;
     (
       header-background-color: $grid-color,
       header-foreground-color: $light-text,
-      odd-row-background-color: $light-color,
+      odd-row-background-color: #e4e5e6,
       data-color: $dark-text,
       font-size: 14px,
+      border-color: $bg-color,
     )
   );
 
+  .ag-layout-normal {
+    border-radius: 10px;
+    border-color: $bg-color;
+  }
+
   .ag-header-cell {
     .ag-input-field-input {
-      color: $dark-text;
+      color: $dark-text !important;
+    }
+    .ag-text-field-input {
+      color: $dark-text !important;
     }
   }
 
   .ag-paging-panel {
     background: $grid-color;
-    border: 1px solid #bdc3c7;
     color: $light-text;
   }
 
