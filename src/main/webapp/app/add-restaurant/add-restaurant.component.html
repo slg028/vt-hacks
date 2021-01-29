@@ -1,1 +1,33 @@
-<p>add-restaurant works!</p>
+<form [formGroup]="restaurantForm" (ngSubmit)="onSubmit()">
+    <label>
+        Name:
+        <input type="text" formControlName="name">
+    </label>
+    <label>
+        Cuisine:
+        <input type="text" formControlName="cuisine">
+    </label>
+    <label>
+        Bar:
+        <input type="text" formControlName="bar">
+    </label>
+    <label>
+        Specials:
+        <input type="text" formControlName="specials">
+    </label>
+    <label>
+        Location:
+        <input type="text" formControlName="location">
+    </label>
+    <label>
+        Price:
+        <input type="text" formControlName="price">
+    </label>
+    <button type="submit" [disabled]="!restaurantForm.valid">Submit</button>
+    <p>
+        Form Status: {{ restaurantForm.status }}
+      </p>
+</form>
+
+
+
