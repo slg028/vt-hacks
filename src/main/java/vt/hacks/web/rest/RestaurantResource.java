@@ -16,6 +16,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -27,6 +28,7 @@ import io.github.jhipster.web.util.HeaderUtil;
 import io.github.jhipster.web.util.PaginationUtil;
 import vt.hacks.domain.Restaurant;
 import vt.hacks.repository.RestaurantRepository;
+import vt.hacks.security.AuthoritiesConstants;
 import vt.hacks.service.RestaurantService;
 import vt.hacks.service.dto.RestaurantDTO;
 import vt.hacks.service.dto.UserDTO;
@@ -61,11 +63,13 @@ public class RestaurantResource {
 	    
 	 }
 	 
+	 
 	 @PostMapping("/restaurant/add")
+	 @PreAuthorize("hasAuthority(\"" + AuthoritiesConstants.USER + "\")")
 	 public ResponseEntity<Restaurant> createRestaurant(@Valid @RequestBody RestaurantDTO restaurantDto) throws URISyntaxException{
 		 Restaurant restaurant = restaurantService.createRestaurant(restaurantDto);
 		 
-		 return ResponseEntity.created(new URI("/api/restaurants/"))
+		 return ResponseEntity.created(new URI("/api/restaurant/add/" + restaurantDto.getId()))
 	                .headers(HeaderUtil.createAlert(applicationName,  "A restaurant is created with identifier " + restaurant.getName(), restaurant.getName()))
 	                .body(restaurant);
 	 }
