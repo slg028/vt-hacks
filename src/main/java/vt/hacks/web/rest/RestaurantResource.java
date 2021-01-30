@@ -9,7 +9,9 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -49,7 +51,7 @@ public class RestaurantResource {
 	  */
 	 @GetMapping("/restaurants")
 	 public ResponseEntity<List<RestaurantDTO>> getAllRestaurants(Pageable pageable){
-		    final Page<RestaurantDTO> page = restaurantService.getAllRestaurants(pageable);
+		    final Page<RestaurantDTO> page = restaurantService.getAllRestaurants(PageRequest.of(0, 40, Sort.unsorted()));
 	        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(ServletUriComponentsBuilder.fromCurrentRequest(), page);
 	        return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
 	    
