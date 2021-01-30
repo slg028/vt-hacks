@@ -97,7 +97,7 @@ public class InitialSetupMigration {
     	
     	Restaurant pks = new Restaurant();
     	pks.setName("pks");
-    	pks.setCuisine("american");
+    	pks.setCuisine("American");
     	pks.setBar(1);
     	pks.setSpecials("Tuesday");
     	pks.setLocation("Downtown Blacksburg");
@@ -106,7 +106,7 @@ public class InitialSetupMigration {
     	
     	Restaurant elRods = new Restaurant();
     	elRods.setName("El Rods");
-    	elRods.setCuisine("mexican");
+    	elRods.setCuisine("Mexican");
     	elRods.setBar(1);
     	elRods.setSpecials("");
     	elRods.setLocation("Downtown Blacksburg");
@@ -115,7 +115,7 @@ public class InitialSetupMigration {
     	
     	Restaurant wendys = new Restaurant();
     	wendys.setName("Wendys");
-    	wendys.setCuisine("fast food");
+    	wendys.setCuisine("Fast Food");
     	wendys.setBar(0);
     	wendys.setSpecials("");
     	wendys.setLocation("Downtown Blacksburg");
@@ -124,16 +124,16 @@ public class InitialSetupMigration {
     	
     	Restaurant bar201 = new Restaurant();
     	bar201.setName("622 Restaurant and Bar");
-    	bar201.setCuisine("");
+    	bar201.setCuisine("Eclectic ");
     	bar201.setBar(1);
     	bar201.setSpecials("");
     	bar201.setLocation("Downtown Blacksburg");
-    	bar201.setPrice(2);
+    	bar201.setPrice(3);
     	mongoTemplate.save(bar201);
     	
     	Restaurant mcDonalds = new Restaurant();
     	mcDonalds.setName("McDonalds");
-    	mcDonalds.setCuisine("fast food");
+    	mcDonalds.setCuisine("Fast Food");
     	mcDonalds.setBar(0);
     	mcDonalds.setSpecials("");
     	mcDonalds.setLocation("Downtown Blacksburg");
@@ -142,7 +142,7 @@ public class InitialSetupMigration {
     	
     	Restaurant cellar = new Restaurant();
     	cellar.setName("Cellar");
-    	cellar.setCuisine("greek");
+    	cellar.setCuisine("Greek");
     	cellar.setBar(1);
     	cellar.setSpecials("");
     	cellar.setLocation("Downtown Blacksburg");
@@ -153,7 +153,7 @@ public class InitialSetupMigration {
     	sharkeys.setName("Sharkeys");
     	sharkeys.setCuisine("American");
     	sharkeys.setBar(1);
-    	sharkeys.setSpecials("");
+    	sharkeys.setSpecials("Wednesday, Sunday");
     	sharkeys.setLocation("Downtown Blacksburg");
     	sharkeys.setPrice(2);
     	mongoTemplate.save(sharkeys);
@@ -162,13 +162,13 @@ public class InitialSetupMigration {
     	moes.setName("Moes");
     	moes.setCuisine("Mexican");
     	moes.setBar(0);
-    	moes.setSpecials("");
+    	moes.setSpecials("Monday");
     	moes.setLocation("Downtown Blacksburg");
     	moes.setPrice(2);
     	mongoTemplate.save(moes);
     	
     	Restaurant fivermill = new Restaurant();
-    	fivermill.setName("Fivermill");
+    	fivermill.setName("Rivermill");
     	fivermill.setCuisine("American");
     	fivermill.setBar(1);
     	fivermill.setSpecials("");
@@ -179,47 +179,155 @@ public class InitialSetupMigration {
     	Restaurant bennys = new Restaurant();
     	bennys.setName("Bennys");
     	bennys.setCuisine("Italian");
-    	bennys.setBar(1);
+    	bennys.setBar(0);
     	bennys.setSpecials("");
     	bennys.setLocation("Downtown Blacksburg");
     	bennys.setPrice(2);
     	mongoTemplate.save(bennys);
     	
     	Restaurant tots = new Restaurant();
-    	tots.setName("Tots");
+    	tots.setName("TOTS");
     	tots.setCuisine("American");
     	tots.setBar(1);
-    	tots.setSpecials("");
+    	tots.setSpecials("Wednesday");
     	tots.setLocation("Downtown Blacksburg");
     	tots.setPrice(3);
     	mongoTemplate.save(tots);
     	
-    	Restaurant sochouse = new Restaurant();
-    	sochouse.setName("Social House");
-    	sochouse.setCuisine("");
-    	sochouse.setBar(0);
-    	sochouse.setSpecials("");
-    	sochouse.setLocation("Downtown Blacksburg");
-    	sochouse.setPrice(2);
-    	mongoTemplate.save(sochouse);
-    	
     	Restaurant cookout = new Restaurant();
     	cookout.setName("Cook Out");
-    	cookout.setCuisine("fast food");
+    	cookout.setCuisine("Fast Food");
     	cookout.setBar(0);
     	cookout.setSpecials("");
-    	cookout.setLocation("Downtown Blacksburg");
+    	cookout.setLocation("Blacksburg");
     	cookout.setPrice(1);
     	mongoTemplate.save(cookout);
     	
     	Restaurant cabo = new Restaurant();
-    	cabo.setName("Cabo");
+    	cabo.setName("Cabo Fish Taco");
     	cabo.setCuisine("Mexican");
     	cabo.setBar(1);
     	cabo.setSpecials("");
     	cabo.setLocation("Downtown Blacksburg");
     	cabo.setPrice(2);
     	mongoTemplate.save(cabo);
+        
+        Restaurant dueSouth = new Restaurant();
+    	dueSouth.setName("Due South BBQ");
+    	dueSouth.setCuisine("BBQ");
+    	dueSouth.setBar(0);
+    	dueSouth.setSpecials("");
+    	dueSouth.setLocation("Christiansburg");
+    	dueSouth.setPrice(2);
+    	mongoTemplate.save(dueSouth);
+        
+        Restaurant redRobin = new Restaurant();
+    	redRobin.setName("Red Robin");
+    	redRobin.setCuisine("American");
+    	redRobin.setBar(1);
+    	redRobin.setSpecials("");
+    	redRobin.setLocation("Christiansburg");
+    	redRobin.setPrice(2);
+    	mongoTemplate.save(redRobin);
+        
+        Restaurant marcoAndLucas = new Restaurant();
+    	marcoAndLucas.setName("Marco And Lucas");
+    	marcoAndLucas.setCuisine("Asian");
+    	marcoAndLucas.setBar(0);
+    	marcoAndLucas.setSpecials("");
+    	marcoAndLucas.setLocation("Blacksburg");
+    	marcoAndLucas.setPrice(1);
+    	mongoTemplate.save(marcoAndLucas);
+        
+        Restaurant firehouse = new Restaurant();
+    	firehouse.setName("Firehouse");
+    	firehouse.setCuisine("American");
+    	firehouse.setBar(0);
+    	firehouse.setSpecials("");
+    	firehouse.setLocation("Blacksburg");
+    	firehouse.setPrice(2);
+    	mongoTemplate.save(firehouse);
+        
+        Restaurant carolLeeDonuts = new Restaurant();
+    	carolLeeDonuts.setName("Carol Lee Donuts");
+    	carolLeeDonuts.setCuisine("Breakfast");
+    	carolLeeDonuts.setBar(0);
+    	carolLeeDonuts.setSpecials("");
+    	carolLeeDonuts.setLocation("Blacksburg");
+    	carolLeeDonuts.setPrice(1);
+    	mongoTemplate.save(carolLeeDonuts);
+        
+        Restaurant blacksburgTavern = new Restaurant();
+    	blacksburgTavern.setName("Blacksburg Tavern");
+    	blacksburgTavern.setCuisine("American");
+    	blacksburgTavern.setBar(1);
+    	blacksburgTavern.setSpecials("");
+    	blacksburgTavern.setLocation("Downtown Blacksburg");
+    	blacksburgTavern.setPrice(2);
+    	mongoTemplate.save(blacksburgTavern);
+        
+        Restaurant dpDoughs = new Restaurant();
+    	dpDoughs.setName("D.P. Dough");
+    	dpDoughs.setCuisine("Italian");
+    	dpDoughs.setBar(0);
+    	dpDoughs.setSpecials("Daily Calzone");
+    	dpDoughs.setLocation("Downtown Blacksburg");
+    	dpDoughs.setPrice(2);
+    	mongoTemplate.save(dpDoughs);
+        
+        Restaurant bww = new Restaurant();
+    	bww.setName("Buffalo Wild Wings");
+    	bww.setCuisine("American");
+    	bww.setBar(1);
+    	bww.setSpecials("Tuesday/Thursday BOGO");
+    	bww.setLocation("Blacksburg");
+    	bww.setPrice(2);
+    	mongoTemplate.save(bww);
+        
+        Restaurant souvlaki = new Restaurant();
+    	souvlaki.setName("Souvlaki");
+    	souvlaki.setCuisine("Greek");
+    	souvlaki.setBar(0);
+    	souvlaki.setSpecials("");
+    	souvlaki.setLocation("Downtown Blacksburg");
+    	souvlaki.setPrice(1);
+    	mongoTemplate.save(souvlaki);
+        
+        Restaurant helloBagel = new Restaurant();
+    	helloBagel.setName("Hello Bagel");
+    	helloBagel.setCuisine("Breakfast");
+    	helloBagel.setBar(0);
+    	helloBagel.setSpecials("");
+    	helloBagel.setLocation("Blacksburg");
+    	helloBagel.setPrice(1);
+    	mongoTemplate.save(helloBagel);
+        
+        Restaurant jimmyJohns = new Restaurant();
+    	jimmyJohns.setName("Jimmy Johns");
+    	jimmyJohns.setCuisine("Fast Food");
+    	jimmyJohns.setBar(0);
+    	jimmyJohns.setSpecials("");
+    	jimmyJohns.setLocation("Downtown Blacksburg");
+    	jimmyJohns.setPrice(1);
+    	mongoTemplate.save(jimmyJohns);
+        
+        Restaurant avellinos  = new Restaurant();
+    	avellinos.setName("Avellinos ");
+    	avellinos.setCuisine("Italian");
+    	avellinos.setBar(1);
+    	avellinos.setSpecials("");
+    	avellinos.setLocation("Blacksburg");
+    	avellinos.setPrice(3);
+    	mongoTemplate.save(avellinos);
+        
+        Restaurant ihop  = new Restaurant();
+    	ihop.setName("IHOP ");
+    	ihop.setCuisine("Breakfast");
+    	ihop.setBar(0);
+    	ihop.setSpecials("");
+    	ihop.setLocation("Christiansburg");
+    	ihop.setPrice(1);
+    	mongoTemplate.save(ihop);
     	
     }
  

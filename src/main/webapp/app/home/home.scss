@@ -11,7 +11,12 @@ Main page styles
 }
 
 .light-text {
-  color: #f2f2f2;
+  color: #f2f2f2 !important;
+}
+
+.small-text {
+  font-size: 10px !important;
+  font-weight: normal !important;
 }
 
 /* wait autoprefixer update to allow simple generation of high pixel density media query */
