@@ -30,69 +30,16 @@ public class RestaurantService {
 	
 	
 	/** 
-	 * Create a new restaurant and add it to the DB
+	 * TODO  - you can use this method for the add restaurant functionality
+	 * Use restaurantRepository.save(restaurant); to save the object
 	 * @param restaurantDto
 	 * @return
 	 */
 	public Restaurant createRestaurant(RestaurantDTO restaurantDto) {
 		Restaurant restaurant = new Restaurant();
-		restaurant.setName(restaurantDto.getName());
-		restaurant.setCuisine(restaurantDto.getCuisine());
-		restaurant.setBar(restaurantDto.getBar());
-		restaurant.setLocation(restaurantDto.getLocation());
-		restaurant.setPrice(restaurantDto.getPrice());
-		restaurant.setSpecials(restaurantDto.getSpecials());
-		
-		restaurantRepository.save(restaurant);
-		log.debug("Created restaurant: {}", restaurant);
 		return restaurant;
 		
 	}
 	
-	/** 
-	 * Given an existing DTO, update the data/information for it
-	 * @param restaurantDto
-	 * @return
-	 */
-	public Optional<RestaurantDTO> updateRestaurantId(RestaurantDTO restaurantDto){
-		return Optional.of(restaurantRepository.findById(restaurantDto.getId()))
-				.filter(Optional::isPresent)
-	            .map(Optional::get)
-				.map(rest -> {
-					rest.setName(restaurantDto.getName());
-					rest.setCuisine(restaurantDto.getCuisine());
-					rest.setBar(restaurantDto.getBar());
-					rest.setLocation(restaurantDto.getLocation());
-					rest.setPrice(restaurantDto.getPrice());
-					rest.setSpecials(restaurantDto.getSpecials());
-					restaurantRepository.save(rest);
-					log.debug("Changed Information for Restaurant: {}", rest);
-					return rest;
-				})
-				.map(RestaurantDTO::new);
-	}
-	
-	/** 
-	 * Given an existing DTO, update the data/information for it
-	 * @param restaurantDto
-	 * @return
-	 */
-	public Optional<RestaurantDTO> updateRestaurantName(RestaurantDTO restaurantDto){
-		return Optional.of(restaurantRepository.findOneByName(restaurantDto.getName()))
-				.filter(Optional::isPresent)
-	            .map(Optional::get)
-				.map(rest -> {
-					rest.setName(restaurantDto.getName());
-					rest.setCuisine(restaurantDto.getCuisine());
-					rest.setBar(restaurantDto.getBar());
-					rest.setLocation(restaurantDto.getLocation());
-					rest.setPrice(restaurantDto.getPrice());
-					rest.setSpecials(restaurantDto.getSpecials());
-					restaurantRepository.save(rest);
-					log.debug("Changed Information for Restaurant: {}", rest);
-					return rest;
-				})
-				.map(RestaurantDTO::new);
-	}
 
 }

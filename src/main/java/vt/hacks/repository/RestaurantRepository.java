@@ -16,11 +16,10 @@ public interface RestaurantRepository extends MongoRepository<Restaurant, String
 
 		Page<Restaurant> findAll(Pageable pageable);
 		
-		List<Restaurant> findAllByPrice(String price);
+		//List<Restaurant> findAllByPrice(String price);
 		
-		List<Restaurant> findAllByCuisine(String cuisine);
-		
-		Optional<Restaurant> findOneByName(String name);
+		//List<Restaurant> findAllByCuisine(String cuisine);
 		
 		//Optional<Restaurant> findOneByName(String name);
+		
 }

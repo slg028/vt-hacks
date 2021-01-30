@@ -58,37 +58,19 @@ public class RestaurantResource {
 	 }
 	 
 	 /**
-	  * Create a new restaurant
-	  * 
-	  * @param restaurantDto
-	  * @return
-	  * @throws URISyntaxException
+	  *TO -DO - create add functionality, using the view example above
 	  */
 	 @PostMapping("/restaurant/add")
 	 public ResponseEntity<Restaurant> createRestaurant(@Valid @RequestBody RestaurantDTO restaurantDto) throws URISyntaxException{
-		 Restaurant restaurant = restaurantService.createRestaurant(restaurantDto);
-		 
-		 return ResponseEntity.created(new URI("/api/restaurant/add/" + restaurantDto.getId()))
-	                .headers(HeaderUtil.createAlert(applicationName,  "A restaurant is created with identifier " + restaurant.getName(), restaurant.getName()))
-	                .body(restaurant);
+		 return new ResponseEntity<>(null);
 	 }
 	 
 	 /**
-	  * Update data for an existing restaurant
-	  * @param restaurantDto
-	  * @return
+	  *TO-DO - add edit functionality, following the add example you work on above
 	  */
 	 @PostMapping("/restaurant/update")
 	 public ResponseEntity<RestaurantDTO> updateRestaurant(@Valid @RequestBody RestaurantDTO restaurantDto){
-		 Optional<RestaurantDTO> updatedRest = restaurantService.updateRestaurantId(restaurantDto);
-		 
-		 if(!updatedRest.isPresent()) {
-			 updatedRest = restaurantService.updateRestaurantName(restaurantDto);
-		 }
-
-	     return ResponseUtil.wrapOrNotFound(updatedRest,
-	            HeaderUtil.createAlert(applicationName, "A restaurant is updated with identifier " + restaurantDto.getId(), restaurantDto.getId()));
-	    
+		 return new ResponseEntity<>(null);
 	 }
 
 	    
