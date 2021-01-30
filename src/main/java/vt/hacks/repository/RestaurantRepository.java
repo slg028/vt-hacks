@@ -22,5 +22,5 @@ public interface RestaurantRepository extends MongoRepository<Restaurant, String
 		
 		Optional<Restaurant> findOneByName(String name);
 		
-		//Optional<Restaurant> fineOneByName(String name);
+		//Optional<Restaurant> findOneByName(String name);
 }
