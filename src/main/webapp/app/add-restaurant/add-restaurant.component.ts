@@ -14,7 +14,7 @@ export class AddRestaurantComponent implements OnInit {
     name: ['', Validators.required],
     cuisine: ['', Validators.required],
     bar: ['', Validators.required],
-    specials: ['', Validators.required],
+    specials: [''],
     location: ['', Validators.required],
     price: ['', Validators.required],
   });
