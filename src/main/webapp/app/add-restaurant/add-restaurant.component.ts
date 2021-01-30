@@ -27,6 +27,7 @@ export class AddRestaurantComponent implements OnInit {
   ngOnInit(): void {}
 
   // Add this.http.post call to the /api/restaurant/add endpoint to add a restaurant
+  // Make sure that you pass this.restaurantForm.value to pass the actual Object 
   onSubmit(): void {
   }
 }
