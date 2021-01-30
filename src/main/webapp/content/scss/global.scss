@@ -5,7 +5,6 @@
 /* ==============================================================
 Bootstrap tweaks
 ===============================================================*/
-
 body,
 h1,
 h2,
@@ -70,14 +69,23 @@ Generic styles
 /* other generic styles */
 
 body {
-  background-color: rgb(107, 44, 61);
+  background-color: $bg-color;
+}
+
+.header-color {
+  background-color: $grid-color;
+  color: $light-text;
+}
+
+.light-text {
+  color: $light-text;
 }
 
 .jh-card {
   padding: 1.5%;
   margin-top: 20px;
   border: none;
-  background-color: rgb(107, 44, 61);
+  background-color: $bg-color;
 }
 
 .error {
